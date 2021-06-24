@@ -137,6 +137,8 @@ form {
   flex-wrap:wrap;
   margin: 0 auto;
   gap:15px;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
 }
 .book { 
   flex: 0 0 20%;
@@ -147,23 +149,40 @@ form {
   .book {
     flex: 0 0 30%;
   }
+  #search-results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media screen and (max-width:768px) {
   .book {
     flex: 0 0 45%;
+  }
+  #search-results-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width:600px) {
   .book {
     flex: 1 0 100%;
   }
+  #search-results-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .book h2, .book h3, .book h4 {
+  padding-top:5px;
   font-size:1rem;
   color:black;
   margin: 0;
   width: 95%;
   margin: 0 auto;
+  text-align: left;
+}
+.book h3 {
+  font-size:0.9rem
+}
+.book h2 {
+  font-size:1.1rem;
 }
 .book {
   margin-top: 35px;

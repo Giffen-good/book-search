@@ -111,7 +111,7 @@ class SearchResults extends React.Component {
             content = <div className="loader">Loading...</div>
         } else {
             if (this.state.numFound > 0) {
-                content = this.state.resultsMarkup
+                content = <div id="search-results-grid">{this.state.resultsMarkup}</div>
                 sortContainer = (
                     <div className="sort-container">
                         <label htmlFor="sortBooks">Sort: </label>
@@ -132,9 +132,7 @@ class SearchResults extends React.Component {
         return (
             <section className="search-results">
                 {sortContainer}
-                <div id="search-results-grid">
-                   {content}
-                </div>
+                {content}
             </section>
         )
     }
