@@ -12,7 +12,7 @@ class SearchItem extends React.Component {
             <a className="book" target="_blank" rel="noreferrer"  href={`https://openlibrary.org${item.key}`}>
                 <img  alt={`Book cover for ${item.title}`} src={coverUrl} />
                 <hgroup>
-                    <h2>{item.title} ({item.first_publish_year})</h2>
+                    <h2>{item.title} ({item.first_publish_year === 0 ? 'Date Unavailable' : item.first_publish_year})</h2>
                     <h3>{item.author_name && item.author_name.map((name, i) => {
                         if (i !== 0) {
                           return `, ${name}`   

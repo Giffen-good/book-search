@@ -54,6 +54,7 @@ class SearchResults extends React.Component {
             }
             return 0
         })
+        console.log(clonedRes)
         return reverse ? clonedRes.reverse() : clonedRes
     }
 
@@ -85,7 +86,7 @@ class SearchResults extends React.Component {
         // If author name is null, remove it from array
         for (let i = 0; i < data.docs.length - 1; i++) {
             if (typeof data.docs[i].first_publish_year == 'undefined') {
-                data.docs[i].first_publish_year = 'N/A'
+                data.docs[i].first_publish_year = 0
             } 
             if (typeof data.docs[i].author_name !== 'undefined') {
                 // Includes an array of "bad" values to be filtered out
