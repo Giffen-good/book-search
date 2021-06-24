@@ -62,7 +62,7 @@ class SearchResults extends React.Component {
     async componentDidMount() {
         if (this.props.keyword) {
             this.setState({loading: true})
-            const searchURL = `http://openlibrary.org/search.json?q=${this.props.keyword}`
+            const searchURL = `https://openlibrary.org/search.json?q=${this.props.keyword}`
             const res = await fetch(searchURL)
             const data = await res.json()
             this.cleanData(data)

@@ -7,7 +7,7 @@ class SearchItem extends React.Component {
     
     render() {
         const item = this.props.item
-        const coverUrl = item.cover_i ? `http://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg` : 'no-image.png'
+        const coverUrl = item.cover_i ? `https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg` : 'no-image.png'
         return (
             <a className="book" target="_blank" rel="noreferrer"  href={`https://openlibrary.org${item.key}`}>
                 <img  alt={`Book cover for ${item.title}`} src={coverUrl} />
