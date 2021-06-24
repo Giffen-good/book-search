@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html {
+  font-size:16px;
+}
 .App {
   text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .App-logo {
@@ -14,18 +20,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #333;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #333;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +39,135 @@
   to {
     transform: rotate(360deg);
   }
+}
+label {
+  display: block;
+  margin-bottom:10px;
+}
+form {
+  max-width: 95%;
+  margin: 0 auto
+}
+
+
+/* Spinner */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #333;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #fff;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #fff;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.search-results {
+  padding: 60px;
+}
+.sort-container label {
+  display: inline-block;
+  padding-right: 5px;
+}
+.sort-container {
+  text-align: left;
+}
+#search-results-grid {
+  display:flex;
+  width:95%;
+  max-width:1300px;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  gap:15px;
+}
+.book { 
+  flex: 0 0 20%;
+  text-decoration: none;
+}
+
+@media screen and (max-width:1000px) {
+  .book {
+    flex: 0 0 30%;
+  }
+}
+@media screen and (max-width:768px) {
+  .book {
+    flex: 0 0 45%;
+  }
+}
+@media screen and (max-width:600px) {
+  .book {
+    flex: 1 0 100%;
+  }
+}
+.book h2, .book h3, .book h4 {
+  font-size:1rem;
+  color:black;
+  margin: 0;
+  width: 95%;
+  margin: 0 auto;
+}
+.book {
+  margin-top: 35px;
+}
+.book img {
+  max-width: 100%;
 }
