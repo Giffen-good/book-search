@@ -15,7 +15,7 @@ function App() {
           <form>
             <label htmlFor="search">Search OpenLibrary catalogue by keyword</label>
             <input className="search"  type="text" name="search" />
-            <input type="submit" value="Submit"></input>
+            <input type="submit" value="Search"></input>
           </form>
         </section>
         <SearchResults keyword={keyword} />
