@@ -145,7 +145,7 @@ form {
   text-decoration: none;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1100px) {
   .book {
     flex: 0 0 30%;
   }
@@ -153,7 +153,7 @@ form {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:850px) {
   .book {
     flex: 0 0 45%;
   }
@@ -161,7 +161,7 @@ form {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:700px) {
   .book {
     flex: 1 0 100%;
   }
@@ -177,9 +177,10 @@ form {
   width: 95%;
   margin: 0 auto;
   text-align: left;
+  margin-left:0
 }
 .book h3 {
-  font-size:0.9rem
+  font-size:0.8rem
 }
 .book h2 {
   font-size:1.1rem;

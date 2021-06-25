@@ -54,7 +54,6 @@ class SearchResults extends React.Component {
             }
             return 0
         })
-        console.log(clonedRes)
         return reverse ? clonedRes.reverse() : clonedRes
     }
 
